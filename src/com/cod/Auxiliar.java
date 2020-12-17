@@ -1,7 +1,7 @@
 package com.cod;
 
 /**
- * Mostrar la tabla de multiplicar de un numero
+ * Clase Auxiliar de la clase principal
  * @author Joel
  * @version 15.0.1
  */
@@ -24,10 +24,18 @@ public class Auxiliar {
 
     /**
      * Constructor con parametros
-     * @param parametro1 un correo
+     * @param usuario un correo
      */
-    Auxiliar(String parametro1){
-        this.email = parametro1;
+    Auxiliar(String usuario){
+        this.email = usuario;
+    }
+
+    /**
+     * Setter del atributo usuario
+     * @param usuario
+     */
+    public void setUsuario(String usuario){
+        this.email = usuario;
     }
 
     /**

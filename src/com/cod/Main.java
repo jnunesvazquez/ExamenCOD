@@ -1,7 +1,7 @@
 package com.cod;
 
 /**
- * Mostrar la tabla de multiplicar de un numero
+ * Clase principal para validar correos
  * @author Joel
  * @version 15.0.1
  */
@@ -11,13 +11,13 @@ public class Main {
      * @param args Metodo principal
      */
     public static void main(String[] args) {
-        if (metodo1("pepe@danielcastelao.org")) {
+        if (metodoPrimerUsuario("pepe@danielcastelao.org")) {
             System.out.println("Listo");
         }
         else {
             System.out.println("Fallo");
         }
-        if (metodo2()) {
+        if (metodoSegundoUsuario()) {
             System.out.println("Listo");
         }
         else {
@@ -26,25 +26,25 @@ public class Main {
     }
 
     /**
-     * Metodo para instanciar los correos y validarlos
-     * @param parametro1 correo del usuario
-     * @return instanciaAuxiliar1.con()
+     * Metodo para comprobar los correos y validarlos
+     * @param usuario correo del usuario
+     * @return AuxiliarPrimerUsuario.con()
      */
-    public static boolean metodo1(String parametro1) {
+    public static boolean metodoPrimerUsuario(String usuario) {
         //cambiamos el objeto para instanciar el metodo Singleton
-        Auxiliar instaciaAuxiliar1 = Auxiliar.getInstance();
-        System.out.println("Conectando a " + instaciaAuxiliar1.ip + ", con el usuario " + parametro1);
-        return instaciaAuxiliar1.con();
+        Auxiliar AuxiliarPrimerUsuario = Auxiliar.getInstance();
+        System.out.println("Conectando a " + AuxiliarPrimerUsuario.ip + ", con el usuario " + usuario);
+        return AuxiliarPrimerUsuario.con();
     }
 
     /**
      * Otro metodo para comprobar y validar otro correo
-     * @return instanciaAuxiliar2.con()
+     * @return AuxiliarSegundoUsuario.con()
      */
-    public static boolean metodo2() {
-        //tambien lo hacemos en el metodo 2
-        Auxiliar instanciaAuxiliar2 = Auxiliar.getInstance();
-        System.out.println("Conectando a " + instanciaAuxiliar2.ip + ", con el usuario " + instanciaAuxiliar2.email);
-        return instanciaAuxiliar2.con();
+    public static boolean metodoSegundoUsuario() {
+        //tambien lo hacemos en el metodo del segundo usuario
+        Auxiliar AuxiliarSegundoUsuario = Auxiliar.getInstance();
+        System.out.println("Conectando a " + AuxiliarSegundoUsuario.ip + ", con el usuario " + AuxiliarSegundoUsuario.email);
+        return AuxiliarSegundoUsuario.con();
     }
 }
