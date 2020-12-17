@@ -18,14 +18,16 @@ public class Main {
     }
 
     public static boolean metodo1(String parametro1) {
-        Auxiliar obxetoAuxiliar1 = new Auxiliar(parametro1);
-        System.out.println("Conectando a " + obxetoAuxiliar1.ip + ", con el usuario " + parametro1);
-        return obxetoAuxiliar1.con();
+        //cambiamos el objeto para instanciar el metodo Singleton
+        Auxiliar instaciaAuxiliar1 = Auxiliar.getInstance();
+        System.out.println("Conectando a " + instaciaAuxiliar1.ip + ", con el usuario " + parametro1);
+        return instaciaAuxiliar1.con();
     }
 
     public static boolean metodo2() {
-        Auxiliar obxetoAuxiliar2 = new Auxiliar();
-        System.out.println("Conectando a " + obxetoAuxiliar2.ip + ", con el usuario " + obxetoAuxiliar2.email);
-        return obxetoAuxiliar2.con();
+        //tambien lo hacemos en el metodo 2
+        Auxiliar instanciaAuxiliar2 = Auxiliar.getInstance();
+        System.out.println("Conectando a " + instanciaAuxiliar2.ip + ", con el usuario " + instanciaAuxiliar2.email);
+        return instanciaAuxiliar2.con();
     }
 }
